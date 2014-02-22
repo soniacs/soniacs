@@ -1,0 +1,175 @@
+// HOME
+// ---------------------------
+	@home-background: #F4F4F4;
+	#home-page{
+		.transition(background-color 0.6s ease-in-out);
+	}
+	.home-page{
+	}
+
+
+
+// HOME SECTIONS
+// ---------------------------
+	.home-section{
+		position: relative;
+		padding: 1em @border-margin;
+	}
+	.home-content{
+		background: white;
+		position: relative;
+		margin: 100% 0 0;
+	}
+
+
+
+// HOME INTRO
+// ---------------------------
+	@home-intro-bg: #1a354f;
+	@home-intro-color: white;
+	@home-intro-btn: 2em;
+
+	.home-intro{
+		background: @black95;
+		border: 10px solid white;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		line-height: 1;
+		display: table;
+		//position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		padding: 0;
+
+		.container{
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		h1{
+			font-size: 3.8em;
+			//font-style: italic;
+			//font-weight: normal;
+			margin-bottom: 0.5em;
+			color: @home-intro-color;
+		}
+	}
+	
+	.home-intro-btns a{
+		.inline-block;
+		.border-radius(@home-intro-btn/2);
+		.opacity(0.6);
+		color: @home-intro-color;
+		border: 6px solid @home-intro-color;
+		font-size: 3em;
+		width: @home-intro-btn;
+		height: @home-intro-btn;
+		padding: 0.3em 0 0;
+		margin: 0 0.1em;
+
+		span{
+			font-size: @home-intro-btn/2 + 0.1;
+		}
+
+		&:hover{
+			color: @home-intro-bg;
+			background: @home-intro-color;
+		}
+	}
+
+
+// LOCAL NAVIGATION
+// ---------------------------
+	@localNavIcons-size: 10px;
+	.local-navigation{
+		.no-style-list;
+		position: fixed;
+		top: @navbar-height;
+		left: @border-margin/2;
+		z-index: 8;
+		display: none;
+
+		li{
+			.opacity(0.85);
+			position: relative;
+
+			&:hover{
+				.opacity(1);
+
+				.local-navigation-title{
+					display: inline;
+				}
+			}
+		}
+
+		a{
+			.border-radius(50%);
+			.transition(background 0.4s ease);
+			display: block;
+			margin: 0 0 0.6em;
+			background: white;
+			width: @localNavIcons-size;
+			height: @localNavIcons-size;
+
+			&.active{
+				background: @textColor;
+			}
+		}
+	}
+	.local-navigation-title{
+		.opacity(0.9);
+		.border-radius(4px);
+		background: white;
+		font-size: 0.78em;
+		text-transform: uppercase;
+		color: @black60;
+		padding: 0.3em 0.8em;
+		letter-spacing: 0.05em;
+		position: absolute;
+		top: -70%;
+		left: @localNavIcons-size*1.8;
+		white-space: nowrap;
+		display: none;
+
+		&:before{
+			.arrowLeft (white, 6px, 6px);
+			position: absolute;
+			top: 50%;
+			left: -6px;
+			margin-top: -6px;
+		}
+	}
+
+
+// HOME PROJECTS
+// ---------------------------
+	.home-project{
+		text-align: center;
+	}
+	.home-project-image{
+
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.home-project-links{
+
+		a{
+			background: @textColor;
+			color: white;
+			padding: 0.5em 1em;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 0.9em;
+			letter-spacing: 0.1em;
+		}
+	}
+
+
+// HOME CONTACT
+// ---------------------------
+	.home-contact{
+	}

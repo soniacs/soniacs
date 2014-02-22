@@ -1,0 +1,7 @@
+<div id="projects-list" class="sidebar">
+	<ul class="sidebar-projects-list">
+		{% for project in projects %}
+			<li><a href="{{ url_for('page', path = project.path) }}"><img src="{{ url_for('static', filename='img/projects/%s' % project.title|replace(" ", "")|lower + '_icon.png') }}" alt=""> {{ project.title }}</a></li>
+		{% endfor %}
+	</ul>
+</div>
