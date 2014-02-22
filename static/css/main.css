@@ -364,12 +364,15 @@ li {
   color: #333333;
 }
 .sidebar-link,
-.pagination-nav a {
+.home-link {
   font-size: 20px;
   margin-top: 3px;
 }
 .sidebar-link {
   float: left;
+}
+.home-link {
+  float: right;
 }
 .main-nav {
   float: left;
@@ -390,24 +393,6 @@ li {
 }
 .main-nav a:hover {
   text-decoration: none;
-}
-.home-link:before {
-  display: none;
-}
-.pagination-nav {
-  text-align: right;
-}
-.pagination-nav li {
-  margin-left: 5px;
-}
-.pagination-nav li.hidden {
-  display: none;
-}
-.pagination-nav a {
-  display: block;
-}
-.pagination-previous {
-  margin-left: 0;
 }
 .site-content.moved-right,
 .site-navbar.moved-right,
