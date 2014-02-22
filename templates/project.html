@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<header class="project-header color-{{ page.title|replace(" ", "")|lower }}">
+		<div class="project-header-container">
+			<h1>{{ page.title }}</h1>
+			<div class="project-description">
+				{{ page.description }}
+			</div>
+			<div class="scroll-down-link"><a href="#project-content"><span class="icon-arrow_bottom"></span></a></div>
+		</div>
+	</header>
+
+	<div id="project-content" class="project-content">
+		<h2><img src="{{ url_for('static', filename='img/projects/%s' % page.title|replace(" ", "")|lower + '_icon.png') }}"></h2>
+		{{ page.html|safe }}
+	</div>
+
+	<footer class="project-footer">
+		<div class="pagination">
+			{% if previous_page != '' %}
+				<a href="{{ url_for('page', path = previous_page.path) }}" class="previous-page">
+					<em>Previous</em> <strong>{{ previous_page.title }}</strong>
+				</a><!--
+			{% else %}
+				<a href="{{ url_for('index') }}" class="previous-page no-previous-page">
+					<strong>Go Back Home</strong>
+				</a><!--
+			{% endif %}
+
+			--><a href="{{ url_for('index') }}" class="projects-list"><span class="icon-close"></span></a><!--
+
+			{% if next_page != '' %}
+				--><a href="{{ url_for('page', path = next_page.path) }}" class="next-page">
+					<em>Next</em> <strong>{{ next_page.title }}</strong>
+				</a>
+			{% else %}
+				--><a href="" class="next-page no-next-page">
+					<strong>That's all!</strong>
+				</a>
+			{% endif %}
+		</div>
+		<div class="email-link"><a href="mailto:mail@sonics.com?subject=Hello!" class="color-{{ page.title|replace(" ", "")|lower }}">Thinking of a project? Let's get started!</a></div>
+	</footer>
+{% endblock content %}

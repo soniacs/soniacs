@@ -1,0 +1,64 @@
+// SIDEBAR
+// ---------------------------
+	@sidebarLink-width: 2em;
+	@sidebarList-width: 18em;
+
+	.site-content.moved-right,
+	.site-navbar.moved-right,
+	.panel.moved-right{
+		margin-left: @sidebarList-width;
+	}
+
+	.sidebar{
+		//.box-shadow(0 0 5px rgba(20,20,20,0.3));
+		.transition(left 0.4s ease-in-out);
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: -@sidebarList-width;
+		background: white;
+		z-index: 10;
+		border-right: 1px solid @black5;
+
+		&.visible{
+			left: 0;
+		}
+	}
+
+	.sidebar-projects-list{
+		.no-style-list;
+		width: @sidebarList-width;
+
+		li a{
+			border-bottom: 1px solid @black5;
+			display: block;
+			padding: @border-margin/1.5 @border-margin;
+			color: @black50;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 0.1em;
+			font-size: 0.9em;
+
+			&:hover{
+				background: @black5;
+				color: @black70;
+				text-decoration: none;
+
+				img{
+					.rotate(360deg);
+				}
+			}
+		}
+
+		img{
+			.transition(all 0.6s ease-out);
+			width: 48px;
+			vertical-align: middle;
+			margin-right: 0.5em;
+		}
+	}
+
+
+
+
+

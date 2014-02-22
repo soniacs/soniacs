@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="home-intro" class="home-section home-intro">
+		<div class="container">
+			<h1>Hi, there! I Make Interfaces.</h1>
+			<!--<div class="home-intro-btns">
+				<a href="#"><span class="icon-arrow_left"></span></a>
+				<a href="#{{ next_page.title|replace(" ", "")|lower }}" data-linked-panel="{{ next_page.title|replace(" ", "")|lower }}"><span class="icon-arrow_bottom"></span></a>
+				<a href="{{ url_for('page', path = next_page.path) }}"><span class="icon-arrow_right"></span></a>
+			</div>-->
+		</div>
+	</div>
+
+	<ul class="local-navigation">
+		{% for project in projects %}
+			<li><a href="#{{ project.title|replace(" ", "")|lower }}" data-linked-panel="{{ project.title|replace(" ", "")|lower }}"></a><span class="local-navigation-title">{{ project.title }}</span></li>
+		{% endfor %}
+	</ul>
+
+	<div class="home-content">
+		{% for project in projects %}
+			<div id="{{ project.title|replace(" ", "")|lower }}" class="home-section home-project">
+
+				<div class="home-project-info">
+					<div class="home-project-icon"><img src="{{ url_for('static', filename='img/projects/%s' % project.title|replace(" ", "")|lower + '_icon.png') }}" alt=""></div>
+					<h2>{{ project.title }}</h2>
+					<p class="home-project-description">{{ project.description }}</p>
+					<p class="home-project-roles"><strong>Roles:</strong> {{ project.roles }}</p>
+					<p class="home-project-links">
+						{% if project.link != None %}
+							<a href="{{ project.link }}">View Website</a>
+						{% endif %}
+						<a href="{{ url_for('page', path = project.path) }}">Know More</a>
+					</p>
+				</div>
+
+				<div class="home-project-image">
+					<img src="{{ url_for('static', filename='img/projects/%s' % project.title|replace(" ", "")|lower + '_home.png') }}" alt="">
+				</div>
+			</div>
+		{% endfor %}
+
+		<div id="home-contact" class="home-section home-contact" data-background="F2F2F2">
+			<h2>Contact</h2>
+			<p>Sonia Soares<br>
+				<a href="">{{site.site_email}}</a></p>
+		</div>
+	</div>
+{% endblock content %}
+
+{% block js_footer %}
+	{{ super() }}
+	<script src="{{ url_for('static', filename='js/home-min.js') }}"></script>
+{% endblock %}

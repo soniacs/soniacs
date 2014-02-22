@@ -1,0 +1,26 @@
+{
+  "fonts": [
+    "fontcustom_c16f762a8da571b1469177246c635f55.ttf",
+    "fontcustom_c16f762a8da571b1469177246c635f55.woff",
+    "fontcustom_c16f762a8da571b1469177246c635f55.eot",
+    "fontcustom_c16f762a8da571b1469177246c635f55.svg"
+  ],
+  "templates": [
+    "fontcustom.css",
+    "_fontcustom.scss",
+    "fontcustom-preview.html"
+  ],
+  "file_name": "fontcustom_c16f762a8da571b1469177246c635f55",
+  "glyphs": [
+    "arrow_bottom",
+    "arrow_left",
+    "arrow_right",
+    "arrow_top",
+    "bottom",
+    "close",
+    "left",
+    "menu",
+    "right",
+    "top"
+  ]
+}
