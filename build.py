@@ -15,10 +15,12 @@ app.config.from_object(__name__)
 pages = FlatPages(app)
 freezer = Freezer(app)
 
+
 # SITE GLOBAL VARS
 site = {
 	'site_name':'',
 	'site_email':'mail@soniacs.com'}
+
 
 # ROUTES
 @app.route('/')
@@ -58,6 +60,7 @@ def page(path):
 		page = page,
 		next_page = next_page,
 		previous_page = previous_page)
+
 
 # RUN AND BUILD
 if __name__ == '__main__':

@@ -1,74 +1,4 @@
 /* ---------------
- * PAGES
- * --------------- */
-
-/*
-$(document).ready(function() {
-
-	// Preload next and after content
-
-	if(window.history && history.pushState) {
-		historyedited = false;
-		$(window).bind('popstate', function(e) {
-			if(historyedited) {
-				//loadContent(location.pathname + location.search);
-				loadContent(location.pathname);
-			}
-		});
-		doPager();
-	}
-});
-
-function doPager() {
-	var currentPosition = 0;
-
-	$('.load-page').bind("click", function(e) {
-		e.preventDefault();
-
-		// Move pages
-		if($(this).hasClass('next-page')){
-			$('#content-container').addClass('move-left');
-		} else if($(this).hasClass('previous-page')) {
-			$('#content-container').addClass('move-right');
-		}
-
-		// Load content
-		loadContent($(this).attr('href'));
-		history.pushState(null, null, $(this).attr('href'));
-		historyedited = true;
-	});
-}
-
-function loadContent(url) {
-
-	$('#site-content').empty().addClass('loading').load(url + ' #content-container', function() {
-		$('#site-content').removeClass('loading');
-
-		doPager();
-		changePagination();
-	});
-}
-
-function changePagination(){
-	var next_page = $('#content-container').attr('data-next-page');
-	var previous_page = $('#content-container').attr('data-previous-page');
-
-	// Change Pagination URLs
-	if(next_page === '') {
-		$('.pagination-next').addClass('hidden');
-	} else {
-		$('.pagination-next').removeClass('hidden').find('a').attr('href', next_page);
-	}
-	if(previous_page === '') {
-		$('.pagination-previous').addClass('hidden');
-	} else {
-		$('.pagination-previous').removeClass('hidden').find('a').attr('href', previous_page);
-	}
-}
-*/
-
-
-/* ---------------
  * SIDEBAR
  * --------------- */
 $(document).ready(function() {
@@ -115,23 +45,6 @@ $(document).ready(function() {
 		}
 
 	});
-});
-
-
-
-/* ---------------
- * NAVBAR
- * --------------- */
-$(document).ready(function() {
-
-	$( window ).scroll(function() {
-		if ($(window).scrollTop() > 10 && $(window).scrollTop() < 100){
-			$('.site-navbar').addClass('hidden');
-		} else if ($(window).scrollTop() === 0) {
-			$('.site-navbar').removeClass('hidden');
-		}
-	});
-
 });
 
 

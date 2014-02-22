@@ -2,7 +2,7 @@
 // ---------------------------
 
 
-// COLOR SCHEME
+// GRAYS
 // ---------------------------
 	@black5:  darken(#fff, 5%);
 	@black10: darken(#fff, 10%);
@@ -16,6 +16,9 @@
 	@black90: darken(#fff, 90%);
 	@black95: darken(#fff, 95%);
 
+
+// ACCENT COLORS
+// ---------------------------
 	@yellow:    #F9C153;
 	@orange:    #F2816B;
 	@red:       #DD5252;
@@ -25,51 +28,52 @@
 	@darkBlue:  #003E54;
 
 
-
-// BASE FONTS
+// TYPOGRAPHY
 // ---------------------------
-	@serifFont:     'Droid Serif', Georgia, serif;
-	@sansFont:      'Open Sans', Arial, Helvetica, sans-serif;
-	@monospaceFont:  Monaco, Menlo, Consolas, "Courier New", monospace;
-	//@iconFont:       'fontcustom';
+	@sansFontFamily:  'Open Sans', Arial, Helvetica, sans-serif;
+	@serifFontFamily: 'Droid Serif', Georgia, serif;
+	@monoFontFamily:   Monaco, Menlo, Consolas, "Courier New", monospace;
 
-	@base-fontSize:   16px;
-	@base-lineHeight: 1.5;
-	@base-font:       @sansFont;
-	@headings-font:   @sansFont;
+	@baseFontSize:     14px;
+	@baseFontFamily:   @sansFontFamily;
+	@baseLineHeight:   20px;
 
 
-// BASE COLORS
+// BASE
 // ---------------------------
-	@bodyBackground: white;
-	@textColor: @black80;
-
-	@linkColor: @blue;
-	@linkColor-hover: darken(@linkColor, 15%);
+	@bodyBackground:   white;
+	@textColor:        @black80;
 
 
-// BUTTONS
+// LINKS
 // ---------------------------
-	@buttons-font:        @sansFont;
-	@buttons-color:       white;
-	@buttons-background:  @darkBlue;
+	@linkColor:        @blue;
+	@linkColorHover:   darken(@linkColor, 15%);
 
 
-// LAYOUT
+// COMPONENT SIZING
 // ---------------------------
-	@border-margin: 20px;
-	@navbar-height: 53px;
+	@fontSizeLarger:   @baseFontSize * 1.25;
+	@fontSizeLarge:    @baseFontSize * 1.05;
+	@fontSizeSmall:    @baseFontSize * 0.85;
+	@fontSizeTiny:     @baseFontSize * 0.75;
+	@fontSizeMini:     @baseFontSize * 0.65;
 
 
-
-
-// BASE BORDERS & BOX-SHADOWS
+// BORDERS
 // ---------------------------
-	/*
-	$base-border: 1px solid $base-color
-	$base-borderRadius: 3px
-	$base-boxShadow: 0 1px 2px rgba($base-color, 0.25)
-	*/
+	// @borderColor
+	// @border
+
+
+// SITE STRUCTURE
+// ---------------------------
+	@pageMargin:      @baseLineHeight;
+	@navbarHeight:    46px;
+	@sidebarWidth:    140px;
+
+	@border-margin:   @pageMargin;
+	@navbar-height:   @navbarHeight;
 
 
 

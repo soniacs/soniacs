@@ -1,20 +1,33 @@
+/* BASE
+ * -------------------------
+ * - Base
+ * - Content
+ * - Links
+ * - Headings
+ * - Lists
+ * - Navs
+ */
+
+
 // BASE
 // ---------------------------
 	* {
 		.box-sizing(border-box);
 	}
 	html{
-		font-size: @base-fontSize;
+		font-size: @baseFontSize;
 	}
 	html, body{
 		height: 100%;
+		margin: 0;
+		padding: 0;
 	}
 	body {
 		background: @bodyBackground;
 		color: @textColor;
-		font-family: @base-font;
+		font-family: @baseFontFamily;
 		font-size: 100%;
-		line-height: @base-lineHeight;
+		line-height: @baseLineHeight;
 		width: 100%;
 		-webkit-font-smoothing: antialiased;
 	}
@@ -22,7 +35,6 @@
 
 // CONTENT
 // ---------------------------
-
 	img {
 		max-width: 100%;
 		height: auto;
@@ -33,7 +45,6 @@
 
 // LINKS
 // ---------------------------
-
 	a {
 		.transition(~"all 0.3s ease");
 		color: @linkColor;
@@ -41,41 +52,35 @@
 
 		&:hover,
 		&:focus{
-			color: @linkColor-hover;
+			color: @linkColorHover;
 			text-decoration: underline;
 		}
 	}
 
 
-// BUTTONS
-// ---------------------------
-	.button{}
-
-
 // HEADINGS
 // ---------------------------
 	h1, h2, h3, h4, h5, h6 {
-		margin-bottom: @base-fontSize;
+		margin: (@baseLineHeight / 2) 0;
+		line-height: @baseLineHeight;
+		text-rendering: optimizelegibility;
 	}
-	h1 {
-		font-size: 2.6em;
-	}
-	h2 {
-		font-size: 2.2em;
-	}
-	h3 {
-		font-size: 1.8em;
-	}
-	h4 {
-		text-transform: uppercase;
-	}
-	h5 {}
-	h6 {}
+
+	h1,
+	h2,
+	h3 { line-height: @baseLineHeight * 2; }
+
+	h1 { font-size: @baseFontSize * 2.75; }
+	h2 { font-size: @baseFontSize * 2.25; }
+	h3 { font-size: @baseFontSize * 1.75; }
+	h4 { font-size: @baseFontSize * 1.25; }
+	h5 { font-size: @baseFontSize; }
+	h6 { font-size: @baseFontSize * 0.85; }
 
 
 // LISTS
 // ---------------------------
-	dl, ol, ul { margin-bottom: 1em;}
+	dl, ol, ul { margin-bottom: @baseLineHeight;}
 	li{ list-style-position: inside; }
 
 
@@ -84,30 +89,6 @@
 	.nav{
 		.no-style-list;
 
-		li{
-			.inline-block;
-		}
-	}
-
-
-// LAYOUT
-// ---------------------------
-	.container{}
-	.site-content{
-		.transition(margin 0.4s ease-in-out);
-		height: 100%;
-		width: 100%;
-		position: relative;
-	}
-	#content-container{
-		.transition(margin 0.4s ease-in-out);
-		height: 100%;
-
-		&.move-left{
-			margin-left: -100%;
-		}
-		&.move-right{
-			margin-left: 200%;
-		}
+		li{ .inline-block; }
 	}
 

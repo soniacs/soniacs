@@ -1,26 +1,22 @@
 {
   "fonts": [
-    "fontcustom_c16f762a8da571b1469177246c635f55.ttf",
-    "fontcustom_c16f762a8da571b1469177246c635f55.woff",
-    "fontcustom_c16f762a8da571b1469177246c635f55.eot",
-    "fontcustom_c16f762a8da571b1469177246c635f55.svg"
+    "fontcustom_9b57ff39850142cb051929aa07cf82ca.ttf",
+    "fontcustom_9b57ff39850142cb051929aa07cf82ca.woff",
+    "fontcustom_9b57ff39850142cb051929aa07cf82ca.eot",
+    "fontcustom_9b57ff39850142cb051929aa07cf82ca.svg"
   ],
   "templates": [
     "fontcustom.css",
     "_fontcustom.scss",
     "fontcustom-preview.html"
   ],
-  "file_name": "fontcustom_c16f762a8da571b1469177246c635f55",
+  "file_name": "fontcustom_9b57ff39850142cb051929aa07cf82ca",
   "glyphs": [
-    "arrow_bottom",
-    "arrow_left",
-    "arrow_right",
-    "arrow_top",
-    "bottom",
     "close",
+    "down",
     "left",
     "menu",
     "right",
-    "top"
+    "up"
   ]
 }

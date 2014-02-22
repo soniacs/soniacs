@@ -11,3 +11,4 @@ temp
 # Others
 .DS_Store
 .webassets-cache
+codekit-config.json

@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2014-2-22: Created.
+-->
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Sat Feb 22 20:16:17 2014
+ By Sonia
+Created by Sonia with FontForge 2.0 (http://fontforge.sf.net)
+</metadata>
+<defs>
+<font id="fontcustom" horiz-adv-x="512" >
+  <font-face 
+    font-family="fontcustom"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 6 9 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="-0.511719 -64 512 448"
+    underline-thickness="25.6"
+    underline-position="-51.2"
+    unicode-range="U+F100-F105"
+  />
+    <missing-glyph />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" 
+d="M461.638 348.4l-156.399 -156.4l156.399 -156.399l-49.2373 -49.2383l-156.4 156.4l-156.399 -156.4l-49.2383 49.2373l156.4 156.4l-156.4 156.4l49.2373 49.2373l156.4 -156.4l156.4 156.4z" />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" 
+d="M512 297.94l-255.678 -255.229l-0.322266 0.321289l-0.322266 -0.321289l-255.678 255.229l43.3623 43.3477l212.638 -212.274l212.638 212.274z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" 
+d="M361.94 -64l-255.229 255.678l0.321289 0.322266l-0.321289 0.322266l255.229 255.678l43.3477 -43.3623l-212.274 -212.638l212.274 -212.638z" />
+    <glyph glyph-name="uniF103" unicode="&#xf103;" 
+d="M-0.511719 337.92v69.6318h512v-69.6318h-512zM-0.511719 -23.5518v69.6318h512v-69.6318h-512zM-0.511719 156.672v69.6318h512v-69.6318h-512z" />
+    <glyph glyph-name="uniF104" unicode="&#xf104;" 
+d="M150.06 448l255.229 -255.678l-0.321289 -0.322266l0.321289 -0.322266l-255.229 -255.678l-43.3477 43.3623l212.274 212.638l-212.274 212.638z" />
+    <glyph glyph-name="uniF105" unicode="&#xf105;" 
+d="M0 86.0596l255.678 255.229l0.322266 -0.321289l0.322266 0.321289l255.678 -255.229l-43.3623 -43.3477l-212.638 212.274l-212.638 -212.274z" />
+  </font>
+</defs></svg>
