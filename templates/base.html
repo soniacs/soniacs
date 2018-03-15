@@ -20,7 +20,9 @@
 		{% include '_sidebar.html' %}
 
 		<div id="site-content" class="site-content">
-			{% block content %}{% endblock content %}
+			<div id="page" class="page">
+				{% block content %}{% endblock content %}
+			</div>
 		</div>
 
 		{#
@@ -56,6 +58,7 @@
 		{% block js_footer %}
 			<script src="{{ url_for('static', filename='js/vendor/waypoints.min.js') }}"></script>
 			<script src="{{ url_for('static', filename='js/min/main.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/min/pages.min.js') }}"></script>
 		{% endblock js_footer %}
 		<script type="text/javascript">
 			var _gaq = _gaq || [];

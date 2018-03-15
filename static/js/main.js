@@ -52,14 +52,14 @@ $(document).ready(function() {
  * SMOOTH SCROLL
  * --------------- */
 $(document).ready(function() {
-	smooth_scroll('.scroll-down-link a', '#project-content');
+	$('*[data-scroll]').bind('click', function(e) {
+		e.preventDefault();
+		smooth_scroll($(this).attr('href'));
+	});
 });
 
-function smooth_scroll(link, destination) {
-	$(link).bind('click', function(e) {
-		e.preventDefault();
-		$('html, body').animate({
-			scrollTop: $(destination).offset().top
-		}, 500);
-	});
-}
+function smooth_scroll(destination) {
+	$('html, body').animate({
+		scrollTop: $(destination).offset().top
+	}, 500);
+};

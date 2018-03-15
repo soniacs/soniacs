@@ -1,21 +1,23 @@
 {% extends "base.html" %}
 
+{% block body_class %}home{% endblock %}
+
 {% block content %}
 	<div id="home-intro" class="home-section home-intro">
 		<div class="container">
 			<h1>I Make Interfaces</h1>
 			<h2>- with Design &amp; Code -</h2>
-			<a href=""><span class="icon-down"></span></a>
+			<a href="#home-content" data-scroll="smooth-scroll"><span class="icon-down"></span></a>
 		</div>
 	</div>
 
 	<ul class="local-navigation">
 		{% for project in projects %}
-			<li><a href="#{{ project.title|replace(" ", "")|lower }}" data-linked-panel="{{ project.title|replace(" ", "")|lower }}"></a><span class="local-navigation-title">{{ project.title }}</span></li>
+			<li><a href="#{{ project.title|replace(" ", "")|lower }}" data-scroll="smooth-scroll"></a><span class="local-navigation-title">{{ project.title }}</span></li>
 		{% endfor %}
 	</ul>
 
-	<div class="home-content">
+	<div id="home-content" class="home-content">
 		{% for project in projects %}
 			<div id="{{ project.title|replace(" ", "")|lower }}" class="home-section home-project">
 
@@ -28,7 +30,7 @@
 						{% if project.link != None %}
 							<a href="{{ project.link }}">View Website</a>
 						{% endif %}
-						<a href="{{ url_for('page', path = project.path) }}">Know More</a>
+						<a href="{{ url_for('page', path = project.path) }}" data-page='next-page'>Know More</a>
 					</p>
 				</div>
 
@@ -48,5 +50,4 @@
 
 {% block js_footer %}
 	{{ super() }}
-	<script src="{{ url_for('static', filename='js/home-min.js') }}"></script>
 {% endblock %}

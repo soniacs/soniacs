@@ -1,3 +1,4 @@
+/*
 $(document).ready(function() {
 
 	// Scroll Animations
@@ -23,8 +24,10 @@ $(document).ready(function() {
 		smooth_scroll($(this).attr('href'));
 	});
 
+});
+*/
 
-	function smooth_scroll(destination){
+function smooth_scroll(destination){
 		$('html, body').animate({
 			scrollTop: $(destination).offset().top
 		}, 1000);
@@ -61,6 +64,3 @@ $(document).ready(function() {
 		}
 		*/
 	}
-
-
-});
